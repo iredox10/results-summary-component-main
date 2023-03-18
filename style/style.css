@@ -1,0 +1,145 @@
+@font-face {
+  font-family: specimen;
+  src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: specimen;
+}
+
+.header {
+  background: linear-gradient(to bottom, hsl(256deg, 72%, 46%), hsl(241deg, 81%, 54%));
+  text-align: center;
+  padding: 2rem 6rem;
+  border-radius: 0 0 4rem 4rem;
+  color: hsl(0deg, 0%, 100%);
+}
+.header h3 {
+  color: hsl(241deg, 100%, 89%);
+}
+.header .score {
+  background: linear-gradient(to bottom, hsl(241deg, 81%, 54%), hsla(252deg, 100%, 67%, 0.1));
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .score .text {
+  font-weight: bold;
+}
+.header .score .text h1 {
+  font-size: 5rem;
+}
+.header .score .text p {
+  color: hsl(241deg, 100%, 89%);
+}
+.header .header-text p {
+  color: hsl(241deg, 100%, 89%);
+  font-weight: bold;
+}
+
+.main {
+  margin: 2rem;
+}
+.main .summary {
+  color: hsl(224deg, 30%, 27%);
+}
+.main .cards .card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.6rem;
+  background: rgba(255, 87, 87, 0.1);
+}
+.main .cards .card .card-text {
+  flex: 1;
+  font-weight: bold;
+  color: hsl(0deg, 100%, 67%);
+}
+.main .cards .card .card-rating {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.main .cards .card .card-rating .parcentage {
+  font-weight: normal;
+}
+.main .cards .card:nth-child(2) {
+  background: rgba(255, 176, 31, 0.1);
+}
+.main .cards .card:nth-child(2) .card-text {
+  color: hsl(39deg, 100%, 56%);
+}
+.main .cards .card:nth-child(3) {
+  background: rgba(0, 189, 145, 0.1);
+}
+.main .cards .card:nth-child(3) .card-text {
+  color: hsl(166deg, 100%, 37%);
+}
+.main .cards .card:nth-child(4) {
+  background: hsl(221deg, 100%, 96%);
+}
+.main .cards .card:nth-child(4) .card-text {
+  color: hsl(256deg, 72%, 46%);
+}
+.main .btn-continue {
+  width: 100%;
+  padding: 1rem;
+  background: hsl(224deg, 30%, 27%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.main .btn-continue:hover {
+  background: hsl(234deg, 85%, 45%);
+}
+
+@media (min-width: 50rem) {
+  body {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vh;
+  }
+  .header {
+    border-radius: 0 2rem 2rem 0;
+    padding: 4rem 0;
+    width: 100%;
+  }
+  .header .score {
+    height: 19rem;
+    width: 19rem;
+  }
+  .header .header-text h2 {
+    font-size: 2rem;
+  }
+  .header .header-text p {
+    font-size: 1.1rem;
+    padding: 1rem 12.44rem;
+  }
+  .main {
+    width: 100%;
+    padding-top: 4rem;
+    padding-inline: 2rem;
+  }
+  .main .btn-continue {
+    display: block;
+    margin-top: 3rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

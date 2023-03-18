@@ -1,0 +1,172 @@
+$Light-red: hsl(0, 100%, 67%);
+$Orangey-yellow: hsl(39, 100%, 56%);
+$Green-teal: hsl(166, 100%, 37%);
+$Cobalt-blue: hsl(234, 85%, 45%);
+
+$White: hsl(0, 0%, 100%);
+$Pale-blue: hsl(221, 100%, 96%);
+$Light-lavender: hsl(241, 100%, 89%);
+$Dark-gray-blue: hsl(224, 30%, 27%);
+
+$Light-slate-blue: hsl(252, 100%, 67%);
+$Light-royal-blue: hsl(241, 81%, 54%);
+
+$Violet-blue: hsla(256, 72%, 46%, 1);
+$Persian-blue: hsla(241, 72%, 46%, 0);
+
+@font-face {
+  font-family: specimen;
+  src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: specimen;
+}
+
+.header {
+  background: linear-gradient(to bottom, $Violet-blue, $Light-royal-blue);
+  text-align: center;
+  padding: 2rem 6rem;
+  border-radius: 0 0 4rem 4rem;
+  color: $White;
+  h3 {
+    color: $Light-lavender;
+  }
+  .score {
+    background: linear-gradient(
+      to bottom,
+      hsl(241, 81%, 54%),
+      hsla(252, 100%, 67%, 0.1)
+    );
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .text {
+      font-weight: bold;
+      h1 {
+        font-size: 5rem;
+      }
+      p {
+        color: $Light-lavender;
+      }
+    }
+  }
+  .header-text {
+    p {
+      color: $Light-lavender;
+      font-weight: bold;
+    }
+  }
+}
+
+.main {
+  margin: 2rem;
+  .summary {
+    color: $Dark-gray-blue;
+  }
+  .cards {
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0.6rem;
+      background: rgba($Light-red, 0.1);
+      .card-text {
+        flex: 1;
+        font-weight: bold;
+        color: $Light-red;
+      }
+      .card-rating {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        .parcentage {
+          font-weight: normal;
+        }
+      }
+      &:nth-child(2) {
+        background: rgba($Orangey-yellow, 0.1);
+        .card-text {
+          color: $Orangey-yellow;
+        }
+      }
+      &:nth-child(3) {
+        background: rgba($Green-teal, 0.1);
+        .card-text {
+          color: $Green-teal;
+        }
+      }
+      &:nth-child(4) {
+        background: $Pale-blue;
+        .card-text {
+          color: $Violet-blue;
+        }
+      }
+    }
+  }
+  .btn-continue {
+    width: 100%;
+    padding: 1rem;
+    background: $Dark-gray-blue;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+    &:hover {
+      background: $Cobalt-blue;
+    }
+  }
+}
+
+@media (min-width: 50rem) {
+  body {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vh;
+  }
+  .header {
+    border-radius: 0 2rem 2rem 0;
+    padding: 4rem 0;
+    width: 100%;
+    .score{
+        height: 19rem;
+        width: 19rem;
+    }
+    .header-text{
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.1rem;
+            padding: 1rem 12.44rem;
+        }
+    }
+  }
+  .main {
+    width: 100%;
+    padding-top: 4rem;
+    padding-inline: 2rem;
+    .card{
+    }
+    .btn-continue{
+        display: block;
+        margin-top: 3rem;
+    }
+  }
+}
